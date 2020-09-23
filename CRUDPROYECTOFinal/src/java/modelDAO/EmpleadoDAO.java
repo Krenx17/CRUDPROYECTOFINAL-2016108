@@ -28,6 +28,9 @@ public class EmpleadoDAO implements CRUD{
                 nuevoEmpleado.setIdEmpleado(rs.getInt("IdEmpleado"));
                 nuevoEmpleado.setDPI(rs.getString("DPI"));
                 nuevoEmpleado.setNombres(rs.getString("Nombres"));
+                nuevoEmpleado.setTelefono(rs.getString("Telefono"));
+                nuevoEmpleado.setEstado(rs.getString("Estado"));
+                nuevoEmpleado.setUser(rs.getString("Users"));
                 listaEmpleado.add(nuevoEmpleado);
             }
         }catch(Exception e){
@@ -48,6 +51,9 @@ public class EmpleadoDAO implements CRUD{
                 nuevoEmpleado.setIdEmpleado(rs.getInt("IdEmpleado"));
                 nuevoEmpleado.setDPI(rs.getString("DPI"));
                 nuevoEmpleado.setNombres(rs.getString("Nombres"));
+                nuevoEmpleado.setTelefono(rs.getString("Telefono"));
+                nuevoEmpleado.setEstado(rs.getString("Estado"));
+                nuevoEmpleado.setUser(rs.getString("Users"));
             }
         }catch(Exception e){
             e.printStackTrace();
@@ -57,7 +63,7 @@ public class EmpleadoDAO implements CRUD{
 
     @Override
     public boolean add(Empleado emp) {
-       String sql = "insert into empelado (DPI, Nombre, Telefono, Estado, Users) values ('"+emp.getDPI()+"', '"+emp.getNombres()+"', '"+emp.getTelefono()+"'), '"+emp.getEstado()+"', '"+emp.getUser()+"')";
+       String sql = "insert into empelado (DPI, Nombres, Telefono, Estado, Users) values ('"+emp.getDPI()+"', '"+emp.getNombres()+"', '"+emp.getTelefono()+"', '"+emp.getEstado()+"', '"+emp.getUser()+"')";
        try{
            con = conect.getConnection();
            ps = con.prepareStatement(sql);
@@ -70,7 +76,7 @@ public class EmpleadoDAO implements CRUD{
 
     @Override
     public boolean edit(Empleado emp) {
-        String sql = "update empleado set DPI='"+emp.getDPI()+"', Nombre = '"+emp.getNombres()+"', Telefono = '"+emp.getTelefono()+"', Estado = '"+emp.getEstado()+"', Users = '"+emp.getUser()+"' where IdEmpleado ="+emp.getIdEmpleado();
+        String sql = "update empleado set DPI='"+emp.getDPI()+"', Nombres = '"+emp.getNombres()+"', Telefono = '"+emp.getTelefono()+"', Estado = '"+emp.getEstado()+"', Users = '"+emp.getUser()+"' where IdEmpleado ="+emp.getIdEmpleado();
         try{
            con = conect.getConnection();
            ps = con.prepareStatement(sql);
