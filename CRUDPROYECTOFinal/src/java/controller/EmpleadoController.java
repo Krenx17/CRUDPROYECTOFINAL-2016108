@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.Empleado;
 import modelDAO.EmpleadoDAO;
 
-public class Controlador extends HttpServlet {
+public class EmpleadoController extends HttpServlet {
     
     String listar = "view/listar.jsp";
     String add = "view/add.jsp";
@@ -36,14 +36,14 @@ public class Controlador extends HttpServlet {
         }
     }
 
-    @Override
+    
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
         String acceso = "";
         String action = request.getParameter ("accion");
         
-        /*else*/ if (action.equalsIgnoreCase("editar")){
+        if (action.equalsIgnoreCase("editar")){
             request.setAttribute("IdEmp", request.getParameter("IdEmpleado"));
             acceso= edit;
         }else if (action.equalsIgnoreCase("Actualizar")){
