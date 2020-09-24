@@ -42,8 +42,26 @@ public class EmpleadoController extends HttpServlet {
         
         String acceso = "";
         String action = request.getParameter ("accion");
-        
-        if (action.equalsIgnoreCase("editar")){
+        if (action.equalsIgnoreCase("listar")){
+            acceso = listar;
+        }else if(action.equalsIgnoreCase("add")){
+            acceso = add;
+        }else if(action.equalsIgnoreCase("Agregar")){
+            String DPI = request.getParameter("txtDPI");
+            String nombre = request.getParameter("txtNombre");
+            String Telefono = request.getParameter("txtTelefono");
+            String Estado = request.getParameter("txtEstado");
+            String User = request.getParameter("txtUser");
+            nuevoEmpleado.setDPI(DPI);
+            nuevoEmpleado.setNombres(nombre);
+            nuevoEmpleado.setNombres(Telefono);
+            nuevoEmpleado.setEstado(Estado);
+            nuevoEmpleado.setUser(User);
+
+            nuevoEmpleadoDAO.add(nuevoEmpleado);
+            acceso = listar;
+
+        }else if (action.equalsIgnoreCase("editar")){
             request.setAttribute("IdEmp", request.getParameter("IdEmpleado"));
             acceso= edit;
         }else if (action.equalsIgnoreCase("Actualizar")){
