@@ -7,16 +7,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <title>Listar Registros</title>
     </head>
     <body>
         <div class="container">
-            <h1> Datos en la entidad Empleado</h1>
-            <a href="EmpleadoController?accion=add">Agregar Registro</a>
+            <h1 class="btn btn-success"> Datos en la entidad Empleado</h1>
+            <a class="btn btn-success" href="EmpleadoController?accion=add">Agregar Registro</a>
                 <br><br>
             <table>
                 <thead>  
-                    <tr>
+                    <tr class="text-center text-primary">
                         <td> Codigo Empleado </td>
                         <td>  <strong>DPI</strong></td>
                         <td>  <strong>Nombres</strong></td>
@@ -36,15 +37,15 @@
                             %>
                 <tbody>
                     <tr>
-                        <td><%= emp.getIdEmpleado()%></td>
-                        <td><%= emp.getDPI()%></td>
-                        <td><%= emp.getNombre()%></td>
-                        <td><%= emp.getTelefono()%></td>
-                        <td><%= emp.getEstado()%></td>
-                        <td><%= emp.getUsers()%></td>
-                        <td>
-                            <a href="EmpleadoController?accion=editar&IdEmpleado=<%=emp.getIdEmpleado()%>">Editar</a> 
-                            <a href="EmpleadoController?accion=eliminar&IdEmpleado=<%=emp.getIdEmpleado()%>">Delete</a>
+                        <td class="text-center active"><%= emp.getIdEmpleado()%></td>
+                        <td class="text-center"><%= emp.getDPI()%></td>
+                        <td class="text-center active"><%= emp.getNombre()%></td>
+                        <td class="text-center active"><%= emp.getTelefono()%></td>
+                        <td class="text-center active"><%= emp.getEstado()%></td>
+                        <td class="text-center active"><%= emp.getUsers()%></td>
+                        <td class="text-center">
+                            <a class="btn btn-warning" href="EmpleadoController?accion=editar&IdEmpleado=<%=emp.getIdEmpleado()%>">Editar</a> 
+                            <a class="btn btn-danger" href="EmpleadoController?accion=eliminar&IdEmpleado=<%=emp.getIdEmpleado()%>">Delete</a>
                         </td>
                     </tr>
                     <%}%>

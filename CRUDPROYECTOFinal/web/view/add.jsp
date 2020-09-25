@@ -17,16 +17,16 @@
                 <h1>Agregar Registro</h1>
                 <form>
                     DPI:<br>
-                    <input type="text" name="txtDPI"><br>
+                    <input class="form-control" type="text" name="txtDPI"><br>
                     Nombres: <br>
-                    <input type="text" name="txtNombre"><br><br>
+                    <input class="form-control" type="text" name="txtNombre"><br><br>
                     Telefono:<br>
-                    <input type="text" name="txtTelefono"><br>
+                    <input class="form-control" type="text" name="txtTelefono"><br>
                     Estado:<br>
-                    <input type="text" name="txtEstado"><br>
+                    <input class="form-control" type="text" name="txtEstado"><br>
                     User:<br>
-                    <input type="text" name="txtUsers"><br> 
-                    <input type="submit" name="accion" value="Agregar"><br>
+                    <input class="form-control" type="text" name="txtUsers"><br> 
+                    <input class="btn btn-primary" type="submit" name="accion" value="Agregar"><br>
                 </form>
             </div>
         </div>

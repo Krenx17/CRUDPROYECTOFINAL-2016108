@@ -11,6 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <title>Pagina Editar</title>
     </head>
     <body>
@@ -24,17 +25,17 @@
                 <h1>Modificar Empleado</h1>
                 <form>
                     <strong>DPI:</strong>
-                    <input type="text" name="txtDPI" value="<%= nuevoEmpleado.getDPI() %>"><br>
+                    <input class="form-control" type="text" name="txtDPI" value="<%= nuevoEmpleado.getDPI() %>"><br>
                     <strong>Nombres:</strong>
-                    <input type="text" name="txtNombre" value="<%= nuevoEmpleado.getNombre() %>"><br>
+                    <input class="form-control" type="text" name="txtNombre" value="<%= nuevoEmpleado.getNombre() %>"><br>
                     <strong>Telefono:</strong>
-                    <input type="text" name="txtTelefono" value="<%= nuevoEmpleado.getTelefono() %>"><br>
+                    <input class="form-control" type="text" name="txtTelefono" value="<%= nuevoEmpleado.getTelefono() %>"><br>
                     <strong>Estado:</strong>
-                    <input type="text" name="txtEstado" value="<%= nuevoEmpleado.getEstado() %>"><br>
+                    <input class="form-control" type="text" name="txtEstado" value="<%= nuevoEmpleado.getEstado() %>"><br>
                     <strong>User:</strong>
-                    <input type="text" name="txtUsers" value="<%= nuevoEmpleado.getUsers() %>"><br>
+                    <input class="form-control" type="text" name="txtUsers" value="<%= nuevoEmpleado.getUsers() %>"><br>
                     <input type="hidden" name="txtIdEmpleado" value="<%= nuevoEmpleado.getIdEmpleado() %>"><br>
-                    <input type="submit" name="accion" value="Actualizar"><br>
+                    <input class="btn btn-primary" type="submit" name="accion" value="Actualizar"><br>
                 </form>
             </div>
         </div>
