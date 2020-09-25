@@ -61,10 +61,10 @@ public class EmpleadoController extends HttpServlet {
             String Estado = request.getParameter("txtEstado");
             String Users = request.getParameter("txtUsers");
             nuevoEmpleado.setDPI(DPI);
-            nuevoEmpleado.setNombres(nombre);
-            nuevoEmpleado.setNombres(Telefono);
+            nuevoEmpleado.setNombre(nombre);
+            nuevoEmpleado.setNombre(Telefono);
             nuevoEmpleado.setEstado(Estado);
-            nuevoEmpleado.setUser(Users);
+            nuevoEmpleado.setUsers(Users);
 
             nuevoEmpleadoDAO.add(nuevoEmpleado);
             acceso = listar;
@@ -81,10 +81,10 @@ public class EmpleadoController extends HttpServlet {
             String user = request.getParameter("txtUser");
             nuevoEmpleado.setIdEmpleado(IdEmpleado);
             nuevoEmpleado.setDPI(DPI);
-            nuevoEmpleado.setNombres(nombres);
+            nuevoEmpleado.setNombre(nombres);
             nuevoEmpleado.setTelefono(telefono);
             nuevoEmpleado.setEstado(estado);
-            nuevoEmpleado.setUser(user);
+            nuevoEmpleado.setUsers(user);
             nuevoEmpleadoDAO.edit(nuevoEmpleado);
             acceso= listar;
         }else if (action.equalsIgnoreCase("eliminar")){

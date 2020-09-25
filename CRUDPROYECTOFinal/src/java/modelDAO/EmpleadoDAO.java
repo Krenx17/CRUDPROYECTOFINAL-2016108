@@ -1,7 +1,5 @@
 package modelDAO;
 
-
-
 import configuration.Conexion;
 import interfaces.CRUD;
 import java.sql.Connection;
@@ -10,9 +8,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import model.Empleado;
-
-
-
 
 public class EmpleadoDAO implements CRUD{
     Conexion conect = new Conexion();
@@ -32,10 +27,10 @@ public class EmpleadoDAO implements CRUD{
                 Empleado nuevoEmpleado = new Empleado();
                 nuevoEmpleado.setIdEmpleado(rs.getInt("IdEmpleado"));
                 nuevoEmpleado.setDPI(rs.getString("DPI"));
-                nuevoEmpleado.setNombres(rs.getString("Nombres"));
+                nuevoEmpleado.setNombre(rs.getString("Nombres"));
                 nuevoEmpleado.setTelefono(rs.getString("Telefono"));
                 nuevoEmpleado.setEstado(rs.getString("Estado"));
-                nuevoEmpleado.setUser(rs.getString("Users"));
+                nuevoEmpleado.setUsers(rs.getString("Users"));
                 listaEmpleado.add(nuevoEmpleado);
             
             
@@ -59,10 +54,10 @@ public class EmpleadoDAO implements CRUD{
             while(rs.next()){
                 nuevoEmpleado.setIdEmpleado(rs.getInt("IdEmpleado"));
                 nuevoEmpleado.setDPI(rs.getString("DPI"));
-                nuevoEmpleado.setNombres(rs.getString("Nombres"));
+                nuevoEmpleado.setNombre(rs.getString("Nombres"));
                 nuevoEmpleado.setTelefono(rs.getString("Telefono"));
                 nuevoEmpleado.setEstado(rs.getString("Estado"));
-                nuevoEmpleado.setUser(rs.getString("Users"));
+                nuevoEmpleado.setUsers(rs.getString("Users"));
             
             
             }
@@ -76,7 +71,7 @@ public class EmpleadoDAO implements CRUD{
 
     @Override
     public boolean add(Empleado emp) {
-       String sql = "insert into empelado (DPI, Nombres, Telefono, Estado, Users) values ('"+emp.getDPI()+"', '"+emp.getNombres()+"', '"+emp.getTelefono()+"', '"+emp.getEstado()+"', '"+emp.getUsers()+"')";
+       String sql = "insert into empelado (DPI, Nombres, Telefono, Estado, Users) values ('"+emp.getDPI()+"', '"+emp.getNombre()+"', '"+emp.getTelefono()+"', '"+emp.getEstado()+"', '"+emp.getUsers()+"')";
        try{
            con = conect.getConnection();
            ps = con.prepareStatement(sql);
@@ -90,7 +85,7 @@ public class EmpleadoDAO implements CRUD{
 
     @Override
     public boolean edit(Empleado emp) {
-        String sql = "update empleado set DPI='"+emp.getDPI()+"', Nombres = '"+emp.getNombres()+"', Telefono = '"+emp.getTelefono()+"', Estado = '"+emp.getEstado()+"', Users = '"+emp.getUsers()+"' where IdEmpleado ="+emp.getIdEmpleado();
+        String sql = "update empleado set DPI='"+emp.getDPI()+"', Nombres = '"+emp.getNombre()+"', Telefono = '"+emp.getTelefono()+"', Estado = '"+emp.getEstado()+"', Users = '"+emp.getUsers()+"' where IdEmpleado ="+emp.getIdEmpleado();
         try{
            con = conect.getConnection();
            ps = con.prepareStatement(sql);

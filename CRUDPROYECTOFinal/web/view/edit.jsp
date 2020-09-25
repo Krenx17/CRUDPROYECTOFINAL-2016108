@@ -32,7 +32,7 @@
                     <strong>Estado:</strong>
                     <input type="text" name="txtEstado" value="<%= nuevoEmpleado.getEstado() %>"><br>
                     <strong>User:</strong>
-                    <input type="text" name="txtUser" value="<%= nuevoEmpleado.getUser() %>"><br>
+                    <input type="text" name="txtUser" value="<%= nuevoEmpleado.getUsers() %>"><br>
                     <input type="hidden" name="txtCodigoPersona" value="<%= nuevoEmpleado.getIdEmpleado() %>"><br>
                     <input type="submit" name="accion" value="Actualizar"><br>
                 </form>

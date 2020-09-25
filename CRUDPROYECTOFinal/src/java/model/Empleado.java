@@ -4,7 +4,7 @@ package model;
 public class Empleado {
     private int IdEmpleado;
     private String DPI;
-    private String Nombres;
+    private String Nombre;
     private String Telefono;
     private String Estado;
     private String Users;
@@ -12,16 +12,14 @@ public class Empleado {
     public Empleado() {
     }
 
-    public Empleado(int IdEmpleado, String DPI, String Nombres, String Telefono, String Estado, String User) {
+    public Empleado(int IdEmpleado, String DPI, String Nombre, String Telefono, String Estado, String Users) {
         this.IdEmpleado = IdEmpleado;
         this.DPI = DPI;
-        this.Nombres = Nombres;
+        this.Nombre = Nombre;
         this.Telefono = Telefono;
         this.Estado = Estado;
         this.Users = Users;
     }
-    
-    
 
     public int getIdEmpleado() {
         return IdEmpleado;
@@ -39,12 +37,12 @@ public class Empleado {
         this.DPI = DPI;
     }
 
-    public String getNombres() {
-        return Nombres;
+    public String getNombre() {
+        return Nombre;
     }
 
-    public void setNombres(String Nombres) {
-        this.Nombres = Nombres;
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
 
     public String getTelefono() {
@@ -67,14 +65,12 @@ public class Empleado {
         return Users;
     }
 
-    public void setUser(String Users) {
+    public void setUsers(String Users) {
         this.Users = Users;
     }
+    
+    
 
-    @Override
-    public String toString() {
-        return "Empleado{" + "IdEmpleado=" + IdEmpleado + ", DPI=" + DPI + ", Nombres=" + Nombres + ", Telefono=" + Telefono + ", Estado=" + Estado + ", User=" + Users + '}';
-    }
    
     
 }

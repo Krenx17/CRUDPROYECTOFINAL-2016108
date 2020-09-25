@@ -38,13 +38,13 @@
                     <tr>
                         <td><%= emp.getIdEmpleado()%></td>
                         <td><%= emp.getDPI()%></td>
-                        <td><%= emp.getNombres()%></td>
+                        <td><%= emp.getNombre()%></td>
                         <td><%= emp.getTelefono()%></td>
                         <td><%= emp.getEstado()%></td>
                         <td><%= emp.getUsers()%></td>
                         <td>
-                            <a href="Controlador?accion=editar&IdEmpleado=<%=emp.getIdEmpleado()%>">Editar</a> 
-                            <a href="Controlador?accion=eliminar&IdEmpleado=<%=emp.getIdEmpleado()%>">Delete</a>
+                            <a href="EmpleadoController?accion=editar&IdEmpleado=<%=emp.getIdEmpleado()%>">Editar</a> 
+                            <a href="EmpleadoController?accion=eliminar&IdEmpleado=<%=emp.getIdEmpleado()%>">Delete</a>
 
                         </td>
                     </tr>

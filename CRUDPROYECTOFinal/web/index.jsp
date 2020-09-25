@@ -10,7 +10,7 @@
         <h1 class="text-center">Pagina Principal </h1>
         <br>
         <div class="text-center">
-            <a class="btn btn-sucess btn-Ig btn-block" href="EmpleadoController?accion=list">Listar Empleado</a>  
+            <a class="btn btn-sucess btn-Ig btn-block" href="EmpleadoController?accion=Listar">Listar Empleado</a>  
         </div>
      
 </html>
