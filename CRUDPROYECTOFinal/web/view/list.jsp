@@ -12,7 +12,7 @@
     <body>
         <div class="container">
             <h1> Datos en la entidad Empleado</h1>
-            <a href="EmpleadoController?accion=add">Agregar Registro <a/>
+            <a href="EmpleadoController?accion=add">Agregar Registro </a>
                 <br><br>
             <table>
                 <thead>  
@@ -24,8 +24,8 @@
                         <td>  <strong>Estado</strong></td>
                         <td>  <strong>User</strong></td>
                         <td>  <strong>Acciones</strong></td>
-                    </tr
-                </thead
+                    </tr>
+                </thead>
                 <%
                             EmpleadoDAO dao = new EmpleadoDAO();
                             List<Empleado> listarEmpleado = dao.listar();
