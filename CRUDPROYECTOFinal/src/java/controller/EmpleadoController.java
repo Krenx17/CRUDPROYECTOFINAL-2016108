@@ -12,7 +12,7 @@ import modelDAO.EmpleadoDAO;
 
 public class EmpleadoController extends HttpServlet {
     
-    String listar = "view/listar.jsp";
+    String listar = "view/list.jsp";
     String add = "view/add.jsp";
     String edit= "view/edit.jsp";
     Empleado nuevoEmpleado = new Empleado();
@@ -51,12 +51,12 @@ public class EmpleadoController extends HttpServlet {
             String nombre = request.getParameter("txtNombre");
             String Telefono = request.getParameter("txtTelefono");
             String Estado = request.getParameter("txtEstado");
-            String User = request.getParameter("txtUser");
+            String Users = request.getParameter("txtUsers");
             nuevoEmpleado.setDPI(DPI);
             nuevoEmpleado.setNombres(nombre);
             nuevoEmpleado.setNombres(Telefono);
             nuevoEmpleado.setEstado(Estado);
-            nuevoEmpleado.setUser(User);
+            nuevoEmpleado.setUser(Users);
 
             nuevoEmpleadoDAO.add(nuevoEmpleado);
             acceso = listar;

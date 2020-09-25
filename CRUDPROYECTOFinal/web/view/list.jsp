@@ -12,7 +12,7 @@
     <body>
         <div class="container">
             <h1> Datos en la entidad Empleado</h1>
-            <a> href="Controlador?accion=add">Agregar Registro <a/>
+            <a href="EmpleadoController?accion=add">Agregar Registro <a/>
                 <br><br>
             <table>
                 <thead>  
@@ -41,10 +41,10 @@
                         <td><%= emp.getNombres()%></td>
                         <td><%= emp.getTelefono()%></td>
                         <td><%= emp.getEstado()%></td>
-                        <td><%= emp.getUser()%></td>
+                        <td><%= emp.getUsers()%></td>
                         <td>
-                            <a>  href="Controlador?accion=editar&IdEmpleado=<%=emp.getIdEmpleado()%>">Editar</a> 
-                            <a> href="Controlador?accion=eliminar&IdEmpleado=<%=emp.getIdEmpleado()%>">Delete</a>
+                            <a href="Controlador?accion=editar&IdEmpleado=<%=emp.getIdEmpleado()%>">Editar</a> 
+                            <a href="Controlador?accion=eliminar&IdEmpleado=<%=emp.getIdEmpleado()%>">Delete</a>
 
                         </td>
                     </tr>
