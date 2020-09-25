@@ -25,7 +25,7 @@
                     Estado:<br>
                     <input type="text" name="txtEstado"><br>
                     User:<br>
-                    <input type="text" name="txtUser"><br> 
+                    <input type="text" name="txtUsers"><br> 
                     <input type="submit" name="accion" value="Agregar"><br>
                 </form>
             </div>

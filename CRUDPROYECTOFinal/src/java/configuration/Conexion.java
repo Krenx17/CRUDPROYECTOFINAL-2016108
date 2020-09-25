@@ -10,7 +10,7 @@ import java.sql.DriverManager;
         public Conexion(){
             try{
                 Class.forName("com.mysql.jdbc.Driver");
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/DBProyecto2020?useSSL=false","root","admin");
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/DBProyecto2020?useSSL=false","root","root");
             }catch(Exception e){
                 e.printStackTrace();
                 System.out.println("La conexión no se pudo establecer" + e);

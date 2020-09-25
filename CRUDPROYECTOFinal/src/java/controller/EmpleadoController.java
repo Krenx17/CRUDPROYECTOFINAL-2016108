@@ -62,7 +62,7 @@ public class EmpleadoController extends HttpServlet {
             String Users = request.getParameter("txtUsers");
             nuevoEmpleado.setDPI(DPI);
             nuevoEmpleado.setNombre(nombre);
-            nuevoEmpleado.setNombre(Telefono);
+            nuevoEmpleado.setTelefono(Telefono);
             nuevoEmpleado.setEstado(Estado);
             nuevoEmpleado.setUsers(Users);
 
@@ -75,16 +75,17 @@ public class EmpleadoController extends HttpServlet {
         }else if (action.equalsIgnoreCase("Actualizar")){
             IdEmpleado = Integer.parseInt(request.getParameter("txtIdEmpleado"));
             String DPI = request.getParameter("txtDPI");
-            String nombres = request.getParameter("txtNombre");
-            String telefono = request.getParameter("txtTelefono");
-            String estado = request.getParameter("txtEstado");
-            String user = request.getParameter("txtUser");
+            String Nombre = request.getParameter("txtNombre");
+            String Telefono = request.getParameter("txtTelefono");
+            String Estado = request.getParameter("txtEstado");
+            String Users = request.getParameter("txtUsers");
+            
             nuevoEmpleado.setIdEmpleado(IdEmpleado);
             nuevoEmpleado.setDPI(DPI);
-            nuevoEmpleado.setNombre(nombres);
-            nuevoEmpleado.setTelefono(telefono);
-            nuevoEmpleado.setEstado(estado);
-            nuevoEmpleado.setUsers(user);
+            nuevoEmpleado.setNombre(Nombre);
+            nuevoEmpleado.setTelefono(Telefono);
+            nuevoEmpleado.setEstado(Estado);
+            nuevoEmpleado.setUsers(Users);
             nuevoEmpleadoDAO.edit(nuevoEmpleado);
             acceso= listar;
         }else if (action.equalsIgnoreCase("eliminar")){

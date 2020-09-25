@@ -26,14 +26,14 @@
                     <strong>DPI:</strong>
                     <input type="text" name="txtDPI" value="<%= nuevoEmpleado.getDPI() %>"><br>
                     <strong>Nombres:</strong>
-                    <input type="text" name="txtNombre" value="<%= nuevoEmpleado.getNombres() %>"><br>
+                    <input type="text" name="txtNombre" value="<%= nuevoEmpleado.getNombre() %>"><br>
                     <strong>Telefono:</strong>
                     <input type="text" name="txtTelefono" value="<%= nuevoEmpleado.getTelefono() %>"><br>
                     <strong>Estado:</strong>
                     <input type="text" name="txtEstado" value="<%= nuevoEmpleado.getEstado() %>"><br>
                     <strong>User:</strong>
-                    <input type="text" name="txtUser" value="<%= nuevoEmpleado.getUsers() %>"><br>
-                    <input type="hidden" name="txtCodigoPersona" value="<%= nuevoEmpleado.getIdEmpleado() %>"><br>
+                    <input type="text" name="txtUsers" value="<%= nuevoEmpleado.getUsers() %>"><br>
+                    <input type="hidden" name="txtIdEmpleado" value="<%= nuevoEmpleado.getIdEmpleado() %>"><br>
                     <input type="submit" name="accion" value="Actualizar"><br>
                 </form>
             </div>

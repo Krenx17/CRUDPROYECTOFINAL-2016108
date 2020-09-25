@@ -12,7 +12,7 @@
     <body>
         <div class="container">
             <h1> Datos en la entidad Empleado</h1>
-            <a href="EmpleadoController?accion=add">Agregar Registro </a>
+            <a href="EmpleadoController?accion=add">Agregar Registro</a>
                 <br><br>
             <table>
                 <thead>  
@@ -45,7 +45,6 @@
                         <td>
                             <a href="EmpleadoController?accion=editar&IdEmpleado=<%=emp.getIdEmpleado()%>">Editar</a> 
                             <a href="EmpleadoController?accion=eliminar&IdEmpleado=<%=emp.getIdEmpleado()%>">Delete</a>
-
                         </td>
                     </tr>
                     <%}%>
