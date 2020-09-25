@@ -4,8 +4,8 @@
     Author     : Admin
 --%>
 
-<%@page import="modelo.Empleado"%>
-<%@page import="modeloDAO.EmpleadoDAO"%>
+<%@page import="model.Empleado"%>
+<%@page import="modelDAO.EmpleadoDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

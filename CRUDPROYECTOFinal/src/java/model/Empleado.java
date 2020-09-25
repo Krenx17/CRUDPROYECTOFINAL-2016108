@@ -7,7 +7,7 @@ public class Empleado {
     private String Nombres;
     private String Telefono;
     private String Estado;
-    private String User;
+    private String Users;
 
     public Empleado() {
     }
@@ -18,7 +18,7 @@ public class Empleado {
         this.Nombres = Nombres;
         this.Telefono = Telefono;
         this.Estado = Estado;
-        this.User = User;
+        this.Users = Users;
     }
     
     
@@ -63,17 +63,17 @@ public class Empleado {
         this.Estado = Estado;
     }
 
-    public String getUser() {
-        return User;
+    public String getUsers() {
+        return Users;
     }
 
-    public void setUser(String User) {
-        this.User = User;
+    public void setUser(String Users) {
+        this.Users = Users;
     }
 
     @Override
     public String toString() {
-        return "Empleado{" + "IdEmpleado=" + IdEmpleado + ", DPI=" + DPI + ", Nombres=" + Nombres + ", Telefono=" + Telefono + ", Estado=" + Estado + ", User=" + User + '}';
+        return "Empleado{" + "IdEmpleado=" + IdEmpleado + ", DPI=" + DPI + ", Nombres=" + Nombres + ", Telefono=" + Telefono + ", Estado=" + Estado + ", User=" + Users + '}';
     }
    
     
