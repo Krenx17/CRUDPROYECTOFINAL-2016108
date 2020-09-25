@@ -1,5 +1,7 @@
 package modelDAO;
 
+
+
 import configuration.Conexion;
 import interfaces.CRUD;
 import java.sql.Connection;
@@ -8,6 +10,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import model.Empleado;
+
+
 
 
 public class EmpleadoDAO implements CRUD{
@@ -24,6 +28,7 @@ public class EmpleadoDAO implements CRUD{
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while(rs.next()){
+                
                 Empleado nuevoEmpleado = new Empleado();
                 nuevoEmpleado.setIdEmpleado(rs.getInt("IdEmpleado"));
                 nuevoEmpleado.setDPI(rs.getString("DPI"));
@@ -32,11 +37,15 @@ public class EmpleadoDAO implements CRUD{
                 nuevoEmpleado.setEstado(rs.getString("Estado"));
                 nuevoEmpleado.setUser(rs.getString("Users"));
                 listaEmpleado.add(nuevoEmpleado);
+            
+            
             }
         }catch(Exception e){
             e.printStackTrace();
         }
         return listaEmpleado;
+   
+    
     }
 
 
@@ -54,11 +63,15 @@ public class EmpleadoDAO implements CRUD{
                 nuevoEmpleado.setTelefono(rs.getString("Telefono"));
                 nuevoEmpleado.setEstado(rs.getString("Estado"));
                 nuevoEmpleado.setUser(rs.getString("Users"));
+            
+            
             }
         }catch(Exception e){
             e.printStackTrace();
+        
         }
         return nuevoEmpleado;
+   
     }
 
     @Override
@@ -70,6 +83,7 @@ public class EmpleadoDAO implements CRUD{
            ps.executeUpdate();
        }catch(Exception e){
            e.printStackTrace();
+       
        }
        return false;
     }
